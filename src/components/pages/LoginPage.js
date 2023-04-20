@@ -1,10 +1,11 @@
-import './App.css';
-import React, { useState } from 'react'
+import { useState } from "react";
+
+
 
 export default function LoginPage() {
 
-    const [prenom, setPrenom]=useState('')
-    const [showError, setShowError]=useState(false)
+    const [prenom, setPrenom] = useState('')
+   
   
     const handleChange=(e)=>{
       e.preventDefault();
@@ -12,32 +13,22 @@ export default function LoginPage() {
     }
     const handleSubmit=(e)=>{
       e.preventDefault();
-      if(prenom===''){
-        setShowError(true)
-        
-      }else{
-        setShowError(false)
-        alert("Bonjour "+prenom)
-      }
-      
+      alert(`Bonjour ${prenom}`)
       setPrenom('')
     }
+   
 
   return (
     <div>
-        <header className="">
-            <h1>Bienvenue chez vous!</h1>
-        </header>
-      <body className='App-body'>
-        <h2>
-          Connectez-vous!  
-        </h2>
-        <form action="" onSubmit={handleSubmit}>
-          <input type="text" value={prenom} placeholder='Entrez votre prenom...' onChange={handleChange} />
-          {/* {showError && <label htmlFor=""> <div>Please fill in this field</div></label> } */}
+        
+        <h1>Bienvenue chez vous!</h1>
+        <br />
+        <h2>Connectez-vous  </h2>
+        <form action="submit" onSubmit={handleSubmit}>
+          <input type="text" value={prenom} placeholder='Entrez votre prenom...' onChange={handleChange} required />
           <button type='submit'>Accedez a votre espace</button>
         </form>
-      </body>
+      
     </div>
   )
 }
