@@ -1,9 +1,6 @@
-import { useState } from "react";
+import React, { useState } from 'react'
 
-
-
-export default function LoginPage() {
-
+export default function LoginForm() {
     const [prenom, setPrenom] = useState('')
    
   
@@ -19,16 +16,12 @@ export default function LoginPage() {
    
 
   return (
-    <div>
-        
-        <h1>Bienvenue chez vous!</h1>
-        <br />
-        <h2>Connectez-vous  </h2>
-        <form action="submit" onSubmit={handleSubmit}>
+    <form action="submit" onSubmit={handleSubmit}>
+          <h1>Bienvenue chez vous!</h1>
+          <br />
+          <h2>Connectez-vous  </h2>
           <input type="text" value={prenom} placeholder='Entrez votre prenom...' onChange={handleChange} required />
           <button type='submit'>Accedez a votre espace</button>
-        </form>
-      
-    </div>
+    </form>
   )
 }

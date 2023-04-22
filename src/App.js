@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-import LoginPage from './components/pages/LoginPage';
+import LoginPage from './components/pages/login/LoginPage';
+// import LoginPage from './components/pages/login/LoginPage';
 
 function App() {
 
