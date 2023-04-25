@@ -3,6 +3,8 @@ import './App.css';
 import { useState } from 'react';
 import LoginPage from './components/pages/login/LoginPage';
 // import LoginPage from './components/pages/login/LoginPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function App() {
 
