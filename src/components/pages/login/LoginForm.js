@@ -33,6 +33,7 @@ export default function LoginForm() {
               
               <input type="text" value={prenom} placeholder='Entrez votre prenom...' onChange={handleChange} required />
               <button>Accedez a votre espace</button>
+              <Link to='/order'>Go to the Order page</Link>
               
         </form>
     
